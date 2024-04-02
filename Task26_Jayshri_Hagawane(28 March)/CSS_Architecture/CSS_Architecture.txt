@@ -1,0 +1,10 @@
+What is CSS Architecture?
+As a style language, CSS is simple to learn and understand in its basic form. Yet, with more complex projects, it can get a little bit trickier. Due to its potential complexity, code can get messy with larger sheets. The key to preventing untidiness is knowing the relevance of organizing CSS documents. Thus, it's fundamental for devs to apply standard practices to improve maintainability. As a result, CSS stylesheets will have a consistent unity.
+
+These are usually style guides: guidance structures to establish consistency through a document. With this approach, a complex design can become much more manageable. That's because it helps code become more scalable, flexible, and reusable. Also, it leaves behind the idea of designing many pages individually. A CSS Architecture can apply on many levels. There are three main steps when structuring CSS:
+
+1. Breaking code into smaller chunks and separating them by scope.
+2. Coding components in independent and encapsulated manners.
+3. Naming CSS selectors according to their purpose and relationship with each other.
+
+When defining CSS classes, the name affects the global scope. While it's great for simple apps, it can become problematic when the project's size grows. In this context, the concept of CSS Architecture rises to make devs' lives easier. Yet, sometimes it can be counterintuitive for code's reusability. 

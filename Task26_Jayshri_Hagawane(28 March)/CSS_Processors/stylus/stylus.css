@@ -1,0 +1,9 @@
+**
+/* Stylus standard CSS syntax */
+primary-color = seashell;
+primary-bg = darkslategrey;
+body {
+    color: primary-color;
+    background: primary-bg;
+}
+**
