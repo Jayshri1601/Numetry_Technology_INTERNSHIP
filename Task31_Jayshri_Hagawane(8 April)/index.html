@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .api-box {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .api-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .api-input {
+            flex: 1;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .api-submit {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .api-submit:hover {
+            background-color: #0056b3;
+        }
+
+        .api-response {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>API Landing Page</h1>
+    <div class="api-box">
+        <form class="api-form" id="apiForm">
+            <input type="text" class="api-input" id="urlInput" placeholder="Enter URL">
+            <button type="submit" class="api-submit">Send</button>
+        </form>
+        <div class="api-response" id="apiResponse"></div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('apiForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var url = document.getElementById('urlInput').value;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('apiResponse').innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                document.getElementById('apiResponse').innerText = "Error: " + error.message;
+            });
+    });
+</script>
+
+</body>
+</html>
